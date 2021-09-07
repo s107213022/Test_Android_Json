@@ -29,7 +29,7 @@
             android:id="@+id/button"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="隨機點名" />
+            android:text="點名" />
 
         <TextView
             android:id="@+id/member"

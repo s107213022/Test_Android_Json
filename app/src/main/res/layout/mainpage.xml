@@ -13,11 +13,18 @@
             android:id="@+id/welcome"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="50sp"
-            android:text="身分:學生" />
+            android:text="身分:學生"
+            android:textSize="50sp" />
 
         <TextView
             android:id="@+id/name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="30sp"
+            android:text="" />
+
+        <TextView
+            android:id="@+id/acc"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textSize="30sp"

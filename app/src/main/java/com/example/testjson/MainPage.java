@@ -21,8 +21,12 @@ public class MainPage extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.mainpage);
         nameword = findViewById(R.id.name);
+        TextView Acc = findViewById(R.id.acc);
         Bundle bundle = getIntent().getExtras();
         String nameuser = bundle.getString("name");
+        String passuser = bundle.getString("password");
+        String accuser = bundle.getString("account");
+        Acc.setText(accuser);
         nameword.setText(nameuser);
         Toast.makeText(this, "歡迎登入", Toast.LENGTH_LONG).show();
 

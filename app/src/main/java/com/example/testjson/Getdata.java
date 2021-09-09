@@ -16,7 +16,7 @@ public class Getdata {
 
     public static JSONArray get(String account,String password) throws IOException, JSONException {
         // 用網址方式來傳帳密
-        URL url = new URL("http://192.168.72.41/android_test/login.php"+"?a="+account +"&p="+password);
+        URL url = new URL("URL"+"?a="+account +"&p="+password);
         // 開始宣告 HTTP 連線需要的物件，這邊通常都是一綑的
         HttpURLConnection connection = (HttpURLConnection) url.openConnection();
         // 建立 Google 比較挺的 HttpURLConnection 物件

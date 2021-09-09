@@ -18,6 +18,6 @@ public class Draw_lots extends AppCompatActivity {
         webSettings.setJavaScriptEnabled(true);
         setContentView(webview);
         webview.setWebViewClient(new WebViewClient());
-        webview.loadUrl("http://192.168.72.41/android_test/drowlots.php");
+        webview.loadUrl("URL");
     }
 }

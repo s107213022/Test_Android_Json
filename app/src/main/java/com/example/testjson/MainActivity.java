@@ -20,7 +20,8 @@ public class MainActivity extends AppCompatActivity {
     String result; // 儲存資料用的字串
     String name; // 使用者名稱
     String B = null;
-    //private String url = "http://192.168.121.23/android_test/getdata.php";
+    String P;
+    String A;
 
     //Http_Post HP;
     //static Handler handler;
@@ -60,6 +61,8 @@ public class MainActivity extends AppCompatActivity {
                 JSONObject jsonObject = B.getJSONObject(0);
                 if(jsonObject.getInt("id")!=-1){
                     name = jsonObject.getString("name");
+                    P = jsonObject.getString("password");
+                    A = jsonObject.getString("account");
                     if(jsonObject.getInt("identity")==2){
                         result = "歡迎老師";
                     }else{
@@ -136,6 +139,8 @@ public class MainActivity extends AppCompatActivity {
                         Intent intent = new Intent(MainActivity.this,MainPage.class);
                         Bundle bundle = new Bundle();
                         bundle.putString("name", name);
+                        bundle.putString("account", A);
+                        bundle.putString("password", P);
                         intent.putExtras(bundle);
                         startActivity(intent);
                         //finish();
@@ -143,6 +148,8 @@ public class MainActivity extends AppCompatActivity {
                         Intent intent = new Intent(MainActivity.this,Main_Teacher.class);
                         Bundle bundle = new Bundle();
                         bundle.putString("name", name);
+                        bundle.putString("account", A);
+                        bundle.putString("password", P);
                         intent.putExtras(bundle);
                         startActivity(intent);
                     }else{
